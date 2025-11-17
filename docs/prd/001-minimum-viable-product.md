@@ -51,9 +51,44 @@ Most dolls are static and lack meaningful interactivity. "Smart dolls" are limit
 
 ## 6. Non-Functional Requirements
 
-- **Performance:**  
+- **Performance:**
   <2s response time for all interactions
-- **Reliability:**  
+- **Reliability:**
   99% cloud uptime for conversational services
-- **Scalability:**  
+- **Scalability:**
   Modular design to support future doll models and feature expansion
+
+## 7. Roadmap & Future Enhancements
+
+### Phase 1: MVP (Launch)
+- Core voice interaction with cloud-connected AI
+- Conversation logging for analytics and debugging
+- OTA firmware updates
+- Basic child-friendly responses via Gemini LLM
+
+### Phase 2: Semantic Context Memory (Q2-Q3 2025)
+Leveraging ScyllaDB's vector search capabilities to enhance conversational intelligence:
+
+**2.1 Semantic Search for Conversation Context**
+- Store embeddings of past user queries and responses
+- Search for semantically similar historical conversations when processing new queries
+- Use discovered patterns to inform LLM prompts, reducing redundancy and improving response consistency
+- **User Benefit:** Doll remembers conversation patterns, provides more coherent and contextual responses
+
+**2.2 Personalized Context Memory**
+- Build persistent profiles of each child's interests, learning level, and conversation patterns
+- Extract semantic features (topics, complexity preferences, engagement style) from conversation history
+- Tailor future responses based on accumulated personal history
+- **User Benefit:** Doll becomes more personalized and attuned to each child's unique interests and learning style
+
+### Phase 3: Intelligent Response Optimization (Q3-Q4 2025)
+- Identify response patterns that lead to higher engagement and satisfaction
+- Store embeddings of successful responses alongside engagement metrics
+- Use similarity search to automatically suggest effective response strategies
+- **User Benefit:** Continuous improvement of conversation quality without manual prompt tuning
+
+### Phase 4: Advanced Features (2026+)
+- Predictive engagement modeling
+- Automated prompt optimization based on aggregate user data
+- Cross-doll learning (insights from 100+ devices informing better responses for all)
+- Integration with parental controls and educational tracking
